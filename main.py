@@ -1,7 +1,7 @@
 from src.dsproject import logger
 from src.dsproject.pipeline.data_ingestion import DataIngestionTrainingPipeline
 from src.dsproject.pipeline.data_validation_pipeline import DataValidationPipeline
-
+from src.dsproject.pipeline.data_transformation_pipeline import DataTransformationTrainingPipeline
 STAGE_NAME = "Data Ingestion stage"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
@@ -17,6 +17,16 @@ try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
    data_ingestion = DataValidationPipeline()
    data_ingestion.initiate_data_validation()
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+STAGE_NAME = "Data Transformation stage"
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
+   data_ingestion = DataTransformationTrainingPipeline()
+   data_ingestion.initiate_data_transformation()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
         logger.exception(e)
