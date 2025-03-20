@@ -11,10 +11,10 @@ from src.dsproject.entity.config_entity import ModelEvaluationConfig
 from src.dsproject.constants import *
 from src.dsproject.utils.common import read_yaml, create_directories,save_json
 
-#import os
-#os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/krishnaik06/datascienceproject.mlflow"
-#os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"
-#os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece21e0e2adb4e36a250ae3251f"
+import os
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/abidalvi9/dsproject.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="abidalvi9"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="845e37b05ed8bb1118083c63855092fab32c2966"
 
 
 class ModelEvaluation:
